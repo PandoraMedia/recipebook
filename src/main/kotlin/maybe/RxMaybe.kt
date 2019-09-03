@@ -9,14 +9,14 @@ class RxMaybe(
     scheduler: Scheduler = Schedulers.computation()
 ) {
     val stream = Maybe.fromCallable<String> {
-        Thread.sleep(1000)
-        if (Random.Default.nextBoolean()) "a value" else null
+        Thread.sleep(1000) // Simulate work to compute or fetch the value to be returned
+        if (Random.Default.nextBoolean()) "A value from RxMaybe" else null
     }
     .observeOn(scheduler)
 
     init {
         stream.subscribe {
-            it?.let(::print)
+            it?.let(::println)
         }
     }
 }
