@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.interval
+package com.pandora.recipebook.interval
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.timeout
+package com.pandora.recipebook.timeout
 
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Scheduler

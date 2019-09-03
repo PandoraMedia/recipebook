@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.maybe
+package com.pandora.recipebook.maybe
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay

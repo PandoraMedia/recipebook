@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.completable
+package com.pandora.recipebook.completable
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

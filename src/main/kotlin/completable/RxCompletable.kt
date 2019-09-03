@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.completable
+package com.pandora.recipebook.completable
 
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Scheduler

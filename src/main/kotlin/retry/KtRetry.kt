@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.retry
+package com.pandora.recipebook.retry
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

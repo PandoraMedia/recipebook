@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.merge
+package com.pandora.recipebook.merge
 
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Scheduler

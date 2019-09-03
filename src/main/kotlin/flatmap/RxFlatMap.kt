@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.flatmap
+package com.pandora.recipebook.flatmap
 
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Scheduler

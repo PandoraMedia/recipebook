@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.flatmap
+package com.pandora.recipebook.flatmap
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay

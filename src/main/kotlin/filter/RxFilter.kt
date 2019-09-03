@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.filter
+package com.pandora.recipebook.filter
 
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Scheduler

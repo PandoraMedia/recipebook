@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.map
+package com.pandora.recipebook.map
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.consumeEach

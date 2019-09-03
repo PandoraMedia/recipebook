@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.single
+package com.pandora.recipebook.single
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

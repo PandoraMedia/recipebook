@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.cancel
+package com.pandora.recipebook.cancel
 
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable

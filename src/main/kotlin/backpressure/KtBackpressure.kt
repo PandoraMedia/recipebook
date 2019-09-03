@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.backpressure
+package com.pandora.recipebook.backpressure
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

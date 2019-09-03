@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.filter
+package com.pandora.recipebook.filter
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.consumeEach

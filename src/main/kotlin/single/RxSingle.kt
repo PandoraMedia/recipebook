@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.single
+package com.pandora.recipebook.single
 
 import io.reactivex.rxjava3.core.Scheduler
 import io.reactivex.rxjava3.core.Single

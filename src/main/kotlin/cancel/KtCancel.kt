@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.cancel
+package com.pandora.recipebook.cancel
 
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext

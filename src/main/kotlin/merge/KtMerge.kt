@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.merge
+package com.pandora.recipebook.merge
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.*

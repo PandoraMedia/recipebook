@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.maybe
+package com.pandora.recipebook.maybe
 
 import io.reactivex.rxjava3.core.Maybe
 import io.reactivex.rxjava3.core.Scheduler
