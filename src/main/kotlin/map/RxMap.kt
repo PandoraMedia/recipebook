@@ -14,7 +14,7 @@ class RxMap (
         stream
             .map { it * 2 }
             .subscribe {
-                print(it)
+                println("Value received from RxMap: $it")
             }
     }
 }
