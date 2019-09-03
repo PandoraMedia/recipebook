@@ -14,14 +14,14 @@ class KtCancel (
         val job = launch { longRunningFunction() }
 
         launch {
-            delay(10000) // wait 10 seconds
+            delay(5000) // wait 5 seconds
             job.cancel()
         }
     }
 
     suspend fun longRunningFunction() {
         while (isActive) {
-            print("Long running job still active")
+            println("Long running job still active in KtCancel")
             delay(timeDelay)
         }
     }

@@ -13,16 +13,19 @@ class RxCancel (
     val stream = Flowable.interval(timeDelay, TimeUnit.SECONDS)
         .observeOn(scheduler)
         .map {
-            "Long running job still active"
+            "Long running job still active in RxCancel"
         }
 
     init {
-        val disposable = stream.subscribe()
+        val disposable = stream.subscribe({
+            println(it)
+        })
 
         Completable.fromAction {
             disposable.dispose()
         }
-        .observeOn(scheduler)
-        .delaySubscription(10, TimeUnit.SECONDS)
+            .observeOn(scheduler)
+            .delaySubscription(5, TimeUnit.SECONDS)
+            .subscribe()
     }
 }
