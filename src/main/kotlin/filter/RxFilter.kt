@@ -14,7 +14,7 @@ class RxFilter (
         stream
             .filter { it % 2 == 0 }
             .subscribe {
-                print(it)
+                println("Value from RxFilter: $it")
             }
     }
 }
