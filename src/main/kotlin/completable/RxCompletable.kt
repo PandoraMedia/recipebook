@@ -8,9 +8,9 @@ class RxCompletable(
     scheduler: Scheduler = Schedulers.computation()
 ) {
     val completable = Completable.fromAction {
-        print("Starting Work")
+        println("Starting Work in Completable")
         Thread.sleep(1000)
-        print("Done with work")
+        println("Done with work in Completable")
     }
         .observeOn(scheduler)
 

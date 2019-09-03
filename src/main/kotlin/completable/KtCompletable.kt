@@ -17,8 +17,8 @@ class KtCompletable(
     }
 
     suspend fun doSomeWork() {
-        print("Starting work")
+        println("Starting work in suspend function")
         delay(1000)
-        print("Done working!")
+        println("Done working in suspend function!")
     }
 }
