@@ -7,24 +7,28 @@ import java.io.IOException
 import java.util.concurrent.TimeUnit
 
 /*
- * A sample of how to implement a stream in RxJava 3 that times out
+ * A sample of how to implement a stream in RxJava 3 that retries execution on failure
  */
 class RxRetry (
-    var numRetry: Long = 5,
+    var numRetry: Int = 5,
     scheduler: Scheduler = Schedulers.computation()
 ) {
     val stream = Flowable.interval(1, TimeUnit.SECONDS)
         .map {
-            "LongRunningTask is still running"
+            println("LongRunningTask in RxRetry is still running")
+        }
+        .map {
+            throw IOException("Hit an error!")
+            it
         }
         .retryWhen {
-            if (numRetry == 0L) {
+            if (numRetry == 0) {
                 it
             }
             numRetry--
             it.flatMap { err ->
                 if (err is IOException) {
-                    Flowable.timer(10000, TimeUnit.MILLISECONDS)
+                    Flowable.timer(5000, TimeUnit.MILLISECONDS)
                 } else {
                     it
                 }
@@ -33,6 +37,8 @@ class RxRetry (
         .observeOn(scheduler)
 
     init {
-        stream.subscribe()
+        stream.subscribe({
+            println(it)
+        })
     }
 }

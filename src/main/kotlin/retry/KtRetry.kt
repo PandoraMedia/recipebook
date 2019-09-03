@@ -21,13 +21,14 @@ class KtRetry (
         while (true) {
             emit("Flow running!")
             delay(1000)
-            throw Exception("Hit an error!")
+            throw IOException("Hit an error!")
         }
     }.retry(numRetry) {
         // We're always going to retry the specified number of times, but if there were to be an IOException, then we'd delay 10 seconds before doing so
         // This is similar to how we'd implement something like exponential backoff, for example
         (it is IOException).also {
-            delay(10000)
+            println("Flow applying delay, retrying")
+            delay(5000)
         }
         true
     }
@@ -35,7 +36,7 @@ class KtRetry (
     init {
         launch {
             stream.collect {
-                print(it)
+                println(it)
             }
         }
     }
