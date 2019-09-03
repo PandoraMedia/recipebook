@@ -16,7 +16,7 @@ class KtSingle(
 
     init {
         launch {
-            print(getValue())
+            println(getValue())
         }
     }
 }

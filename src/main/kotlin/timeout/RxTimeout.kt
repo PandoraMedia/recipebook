@@ -1,5 +1,6 @@
 package com.pandora.recipebook.timeout
 
+import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Scheduler
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -14,12 +15,14 @@ class RxTimeout (
 ) {
     val stream = Flowable.interval(1, TimeUnit.SECONDS)
         .map {
-            "LongRunningTask is still running"
+            "LongRunningTask in RxTimeout is still running"
         }
-        .timeout(timeoutMs, TimeUnit.MILLISECONDS)
+        .take(timeoutMs, TimeUnit.MILLISECONDS)
         .observeOn(scheduler)
 
     init {
-        stream.subscribe()
+        stream.subscribe({
+            println(it)
+        })
     }
 }

@@ -18,7 +18,7 @@ class KtTimeout (
 
     suspend fun longRunningTask() = withTimeout(timeoutMs) {
         while (true) {
-            print("LongRunningTask is still running")
+            println("LongRunningTask in KtTimeout is still running")
             delay(1000)
         }
     }

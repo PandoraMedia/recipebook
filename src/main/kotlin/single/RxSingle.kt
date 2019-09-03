@@ -15,7 +15,7 @@ class RxSingle(
 
     init {
         stream.subscribe({
-            print(it)
+            println(it)
         }, {
             it.printStackTrace()
         })
