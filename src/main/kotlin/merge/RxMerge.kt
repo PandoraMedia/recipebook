@@ -14,8 +14,8 @@ class RxMerge(
     init {
         Flowable.merge(intStream, stringStream)
             .observeOn(scheduler)
-            .subscribe { it ->
-                print(it)
+            .subscribe {
+                println("Value from RxMerge: $it")
             }
     }
 }
