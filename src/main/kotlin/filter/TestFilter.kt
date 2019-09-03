@@ -1,7 +1,4 @@
-package filter
-
-import com.pandora.recipebook.filter.KtFilter
-import com.pandora.recipebook.filter.RxFilter
+package com.pandora.recipebook.filter
 
 fun main() {
     val ktFilter = KtFilter()

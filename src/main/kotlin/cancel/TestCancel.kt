@@ -1,7 +1,4 @@
-package cancel
-
-import com.pandora.recipebook.cancel.KtCancel
-import com.pandora.recipebook.cancel.RxCancel
+package com.pandora.recipebook.cancel
 
 fun main() {
     val ktCancel = KtCancel()

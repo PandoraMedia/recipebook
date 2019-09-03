@@ -1,7 +1,4 @@
-package maybe
-
-import com.pandora.recipebook.maybe.KtMaybe
-import com.pandora.recipebook.maybe.RxMaybe
+package com.pandora.recipebook.maybe
 
 fun main() {
     println("Creating a KtMaybe. It might print, it might not!")

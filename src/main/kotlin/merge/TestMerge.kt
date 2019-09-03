@@ -1,7 +1,4 @@
-package merge
-
-import com.pandora.recipebook.merge.KtMerge
-import com.pandora.recipebook.merge.RxMerge
+package com.pandora.recipebook.merge
 
 fun main() {
    val ktMerge = KtMerge()

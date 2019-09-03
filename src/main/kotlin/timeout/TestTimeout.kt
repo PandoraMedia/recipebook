@@ -1,7 +1,4 @@
-package timeout
-
-import com.pandora.goldfield.recipebook.timeout.KtTimeout
-import com.pandora.recipebook.timeout.RxTimeout
+package com.pandora.recipebook.timeout
 
 fun main() {
     val ktTimeoutMs = 5000L

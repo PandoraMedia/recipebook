@@ -1,7 +1,4 @@
-package single
-
-import com.pandora.recipebook.single.KtSingle
-import com.pandora.recipebook.single.RxSingle
+package com.pandora.recipebook.single
 
 fun main() {
     println("Creating KtSingle object. It will say Hello in 1 second.")

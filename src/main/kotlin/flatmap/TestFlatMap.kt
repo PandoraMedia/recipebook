@@ -1,7 +1,4 @@
-package flatmap
-
-import com.pandora.recipebook.flatmap.KtFlatMap
-import com.pandora.recipebook.flatmap.RxFlatMap
+package com.pandora.recipebook.flatmap
 
 fun main() {
     println("Creating KtFlatMap")

@@ -1,7 +1,4 @@
-package map
-
-import com.pandora.recipebook.map.KtMap
-import com.pandora.recipebook.map.RxMap
+package com.pandora.recipebook.map
 
 fun main() {
     println("Creating KtMap.")

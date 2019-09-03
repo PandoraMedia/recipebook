@@ -1,7 +1,4 @@
-package backpressure
-
-import com.pandora.recipebook.backpressure.KtBackpressure
-import com.pandora.recipebook.backpressure.RxBackpressure
+package com.pandora.recipebook.backpressure
 
 fun main() {
     val ktBackpressure = KtBackpressure()

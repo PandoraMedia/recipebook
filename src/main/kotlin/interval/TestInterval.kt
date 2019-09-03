@@ -1,7 +1,4 @@
-package interval
-
-import com.pandora.recipebook.interval.KtInterval
-import com.pandora.recipebook.interval.RxInterval
+package com.pandora.recipebook.interval
 
 fun main() {
     println("Creating instance of KtInterval")

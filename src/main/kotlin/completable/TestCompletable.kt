@@ -1,7 +1,4 @@
-package completable
-
-import com.pandora.recipebook.completable.KtCompletable
-import com.pandora.recipebook.completable.RxCompletable
+package com.pandora.recipebook.completable
 
 fun main() {
     val ktCompletable = KtCompletable()

@@ -1,7 +1,4 @@
-package retry
-
-import com.pandora.recipebook.retry.KtRetry
-import com.pandora.recipebook.retry.RxRetry
+package com.pandora.recipebook.retry
 
 fun main() {
     println("Creating KtRetry")

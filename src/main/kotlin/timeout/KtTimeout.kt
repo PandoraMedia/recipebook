@@ -1,4 +1,4 @@
-package com.pandora.goldfield.recipebook.timeout
+package com.pandora.recipebook.timeout
 
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
