@@ -13,9 +13,11 @@ class RxBackpressure (
         .observeOn(scheduler)
 
     init {
-        stream.subscribe {
-            print("Consuming $it")
+        stream.subscribe({
+            println("Consuming from RxBackpressure value $it")
             Thread.sleep(1000)
-        }
+        }, {
+            println("Exception in stream: ${it.message}")
+        })
     }
 }

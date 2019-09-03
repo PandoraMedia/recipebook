@@ -22,7 +22,7 @@ class KtBackpressure (
         // In this section, note that the OOO matters - try moving things around, and observe the results!
         launch {
             publisher.consumeEach {
-                print("Consuming $it")
+                println("Consuming from KtBackpressure value $it")
                 delay(1000)
             }
         }
