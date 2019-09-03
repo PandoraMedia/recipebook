@@ -3,6 +3,7 @@ package com.pandora.recipebook.interval
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.channels.consumeEach
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
@@ -24,10 +25,16 @@ class KtInterval(
                 delay(intervalMs)
             }
         }
+
+        launch {
+            channel.consumeEach {
+                println("KtInterval $it")
+            }
+        }
     }
 
     private suspend fun emitSeconds() {
-        channel.send("Seconds since start: $seconds")
+        channel.send("seconds since start: $seconds")
         seconds++
     }
 }

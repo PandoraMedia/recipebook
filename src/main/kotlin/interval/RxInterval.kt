@@ -14,7 +14,7 @@ class RxInterval (
 ) {
     val stream = Flowable.interval(intervalMs, TimeUnit.MILLISECONDS)
         .map {
-            "Seconds since start: $seconds"
+            "seconds since start: $seconds"
         }
         .doOnNext {
             seconds++
@@ -23,6 +23,8 @@ class RxInterval (
     private var seconds = 0
 
     init {
-        stream.subscribe()
+        stream.subscribe({
+            println("RxInterval $it")
+        })
     }
 }
