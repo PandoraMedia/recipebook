@@ -16,7 +16,7 @@ class RxFlatMap (
 
     init {
         stream.subscribe {
-            print(it)
+            println(it)
         }
     }
 

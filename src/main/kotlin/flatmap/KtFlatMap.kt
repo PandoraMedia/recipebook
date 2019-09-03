@@ -1,13 +1,14 @@
 package com.pandora.recipebook.flatmap
 
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
 class KtFlatMap(
-    override val coroutineContext: CoroutineContext
+    override val coroutineContext: CoroutineContext = Dispatchers.Default
 ): CoroutineScope {
     init {
         launch {
@@ -16,7 +17,7 @@ class KtFlatMap(
                 .flatMapConcat {
                     flowOne(it)
                 }.collect {
-                    print(it)
+                    println(it)
                 }
         }
     }
