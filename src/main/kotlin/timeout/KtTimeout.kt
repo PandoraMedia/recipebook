@@ -7,7 +7,7 @@ import kotlin.coroutines.CoroutineContext
  * A sample of how to implement a coroutine that times out
  */
 class KtTimeout (
-    val timeoutMs: Long = 1000,
+    val timeoutMs: Long = 3000,
     override val coroutineContext: CoroutineContext = Dispatchers.Default
 ): CoroutineScope {
     init {

@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
  * A sample of how to implement a stream in RxJava 3 that times out
  */
 class RxTimeout (
-    timeoutMs: Long = 1000,
+    timeoutMs: Long = 3000,
     scheduler: Scheduler = Schedulers.computation()
 ) {
     val stream = Flowable.interval(1, TimeUnit.SECONDS)

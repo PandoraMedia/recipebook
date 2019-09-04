@@ -6,11 +6,11 @@ import io.reactivex.rxjava3.core.Scheduler
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
-private const val timeDelay = 1L
+private const val timeDelay = 1000L
 class RxCancel (
     scheduler: Scheduler = Schedulers.computation()
 ) {
-    val stream = Flowable.interval(timeDelay, TimeUnit.SECONDS)
+    val stream = Flowable.interval(timeDelay, TimeUnit.MILLISECONDS)
         .observeOn(scheduler)
         .map {
             "Long running job still active in RxCancel"
@@ -25,7 +25,7 @@ class RxCancel (
             disposable.dispose()
         }
             .observeOn(scheduler)
-            .delaySubscription(5, TimeUnit.SECONDS)
+            .delaySubscription(5000, TimeUnit.MILLISECONDS)
             .subscribe()
     }
 }
