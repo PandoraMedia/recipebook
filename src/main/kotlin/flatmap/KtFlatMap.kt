@@ -13,7 +13,7 @@ class KtFlatMap(
     init {
         launch {
             (1..10).asFlow()
-                .delayEach(500)
+                .delayEach(500) // Note that the code here differs from the RxFlatMap example - this is intentional, and serves to demonstrate how the emissions from each of the flows interact when collected.
                 .flatMapConcat {
                     flowOne(it)
                 }.collect {

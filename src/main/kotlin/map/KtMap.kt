@@ -12,7 +12,7 @@ class KtMap (
     override val coroutineContext: CoroutineContext = Dispatchers.Default
 ): CoroutineScope {
     val producer = produce {
-        (1..100).map {
+        (1..100).forEach {
             send(it)
         }
     }

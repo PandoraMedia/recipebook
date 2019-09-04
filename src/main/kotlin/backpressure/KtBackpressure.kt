@@ -13,8 +13,8 @@ class KtBackpressure (
     override val coroutineContext: CoroutineContext = Dispatchers.Default
 ): CoroutineScope {
     val publisher = produce(capacity = bufferCapacity) {
-        for (i in 1..10) {
-            send(i)
+        (1..10).forEach {
+            send(it)
         }
     }
 

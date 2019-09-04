@@ -16,7 +16,12 @@ class KtSingle(
 
     init {
         launch {
-            println(getValue())
+            try {
+                println(getValue())
+            } catch (e: Exception) {
+                // Exception handling here to keep consistent with RxSingle, although it is not required in this case.
+                println(e.message)
+            }
         }
     }
 }
