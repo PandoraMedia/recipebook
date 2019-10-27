@@ -34,8 +34,8 @@ class KtFilter (
 
     init {
         launch {
-            producer.filter { it % 2 == 0 }
-            .consumeEach {
+            producer.filter { it % 2 == 0 } // the .filter operator here will only send even numbers downstream
+            .consumeEach { // consumeEach subscribes to the producer Channel
                 println("Value from KtFilter: $it")
             }
         }

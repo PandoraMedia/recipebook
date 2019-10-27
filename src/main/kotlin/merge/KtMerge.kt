@@ -29,7 +29,7 @@ class KtMerge(
 
     init {
         launch {
-            flowOf(flowOne, flowTwo).flattenMerge().collect {
+            flowOf(flowOne, flowTwo).flattenMerge().collect { // without the flattenMerge() we'd have a flow of flows rather than a flow of Ints
                 println("Value from KtMerge $it")
             }
         }
