@@ -9,7 +9,7 @@ import kotlin.coroutines.CoroutineContext
 class CompletableInterop(
     override val coroutineContext: CoroutineContext = Dispatchers.Default
 ): CoroutineScope {
-    fun doWork() = CoroutineScope(coroutineContext).rxCompletable {
+    fun doWork() = rxCompletable {
         delay(1000)
         println("Hello from the coroutine!")
     }

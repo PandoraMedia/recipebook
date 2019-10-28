@@ -9,7 +9,7 @@ import kotlin.random.Random
 class MaybeInterop(
     override val coroutineContext: CoroutineContext = Dispatchers.Default
 ): CoroutineScope {
-    fun doWorkMaybe() = CoroutineScope(coroutineContext).rxMaybe {
+    fun doWorkMaybe() = rxMaybe {
         return@rxMaybe if (Random.Default.nextBoolean()) "A value from the function" else null
     }
 }
