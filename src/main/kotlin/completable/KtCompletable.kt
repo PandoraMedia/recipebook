@@ -26,7 +26,7 @@ class KtCompletable(
 ): CoroutineScope {
 
     init {
-        launch {
+        launch { // Since the encapsulating class extends CoroutineScope, we can simply use the launch coroutine builder to fire the work as a child of the current scope
             doSomeWork()
         }
     }

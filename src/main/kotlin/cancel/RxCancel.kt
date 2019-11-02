@@ -25,22 +25,22 @@ private const val timeDelay = 1000L
 class RxCancel (
     scheduler: Scheduler = Schedulers.computation()
 ) {
-    val stream = Flowable.interval(timeDelay, TimeUnit.MILLISECONDS)
+    val stream = Flowable.interval(timeDelay, TimeUnit.MILLISECONDS) // Once every second...
         .observeOn(scheduler)
         .map {
-            "Long running job still active in RxCancel"
+            "Long running job still active in RxCancel" // emit this string
         }
 
     init {
         val disposable = stream.subscribe({
-            println(it)
+            println(it) // log every emission to the console
         })
 
         Completable.fromAction {
-            disposable.dispose()
+            disposable.dispose() // throw away our subscription to the stream, canceling it
         }
-            .observeOn(scheduler)
-            .delaySubscription(5000, TimeUnit.MILLISECONDS)
-            .subscribe()
+        .observeOn(scheduler)
+        .delaySubscription(5000, TimeUnit.MILLISECONDS) // Wait 5 seconds, then subscribe (for demonstration purposes)
+        .subscribe()
     }
 }

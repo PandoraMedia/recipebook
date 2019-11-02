@@ -29,13 +29,13 @@ class KtCancel (
         val job = launch { longRunningFunction() }
 
         launch {
-            delay(5000) // wait 5 seconds
-            job.cancel()
+            delay(5000) // wait 5 seconds,
+            job.cancel() // then cancel the running coroutine
         }
     }
 
     suspend fun longRunningFunction() {
-        while (isActive) {
+        while (isActive) { // check that the coroutine has not been canceled
             println("Long running job still active in KtCancel")
             delay(timeDelay)
         }
