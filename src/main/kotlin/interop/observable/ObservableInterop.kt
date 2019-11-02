@@ -9,7 +9,7 @@ import kotlin.coroutines.CoroutineContext
 class ObservableInterop(
     override val coroutineContext: CoroutineContext = Dispatchers.Default
 ): CoroutineScope {
-    fun getStream() = CoroutineScope(coroutineContext).rxObservable {
+    fun getStream() = rxObservable {
         (1..10).map {
             delay(100)
             send(it)
